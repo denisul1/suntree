@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primaryColor: #f4ac32;
+  --secondaryColor: #dd6031;
+  --thirdColor: #311e10;
+}
+
+body {
+  min-height: 100%;
+  background-size: cover;
+  background: url("./images/wallp.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+h1 {
+  text-align: center;
+  user-select: none;
+  font-family: "Roboto", sans-serif;
+  color: var(--primaryColor);
+}
+ul {
+  list-style-type: none;
+  text-align: center;
+}
+ul a {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  color: var(--thirdColor);
+  font-size: 2rem;
+  background: var(--secondaryColor);
+  padding: 2rem;
+  border-radius: 1.2rem;
+  transition: all 0.6s;
+}
+ul a:hover {
+  color: var(--primaryColor);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}

@@ -1,0 +1,202 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primaryColor: #f4ac32;
+  --secondaryColor: #dd6031;
+  --thirdColor: black;
+}
+body {
+  min-height: 100%;
+  background: url("./images/wallp.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid white;
+  border-radius: 50%;
+  border-top: 16px solid var(--secondaryColor);
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+div {
+  text-align: center;
+}
+label {
+  font-size: 1.5rem;
+  color: var(--thirdColor);
+  background-color: var(--secondaryColor);
+  border-radius: 1rem;
+  padding: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+p {
+  font-size: 2rem;
+  margin: 5rem;
+  background-color: var(--secondaryColor);
+  color: var(--thirdColor);
+  font-family: "Roboto", sans-serif;
+  border-radius: 3rem;
+  padding: 1rem;
+  user-select: none;
+}
+input {
+  margin: 2rem;
+  font-family: "Roboto", sans-serif;
+  user-select: none;
+}
+.quizAnswers {
+  font-size: 1rem;
+  color: var(--secondaryColor);
+  border-radius: 1rem;
+  padding: 1rem;
+  font-family: "Roboto", sans-serif;
+  user-select: none;
+}
+h2 {
+  font-size: 1.5rem;
+  color: var(--primaryColor);
+  border-radius: 1rem;
+  padding: 1rem;
+  font-family: "Roboto", sans-serif;
+  user-select: none;
+}
+.quizSubmit {
+  padding: 1rem 2rem 1rem 2rem;
+  font-size: 1.5rem;
+  color: var(--thirdColor);
+  background-color: var(--secondaryColor);
+  outline: none;
+  border: none;
+  border-radius: 1rem;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.quizSubmit:hover {
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+li {
+  text-align: center;
+  list-style-type: none;
+  padding: 1rem, 2rem, 1rem, 2rem;
+  font-size: 1.5rem;
+}
+li a {
+  text-decoration: none;
+  border-radius: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: var(--secondaryColor);
+  color: black;
+  font-family: "Roboto", sans-serif;
+  transition: 0.4s;
+}
+a:hover {
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+input[type="radio"] {
+  height: 30px;
+  width: 30px;
+  vertical-align: middle;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+input[type="radio"]:after {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: white;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+input[type="radio"]:checked:after {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: var(--primaryColor);
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
