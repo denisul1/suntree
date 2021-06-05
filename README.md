@@ -1,2 +1,2 @@
-# suntree
-still learning the basics
+# Responsive Web Design
+Suntree.inc
